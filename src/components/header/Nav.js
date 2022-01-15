@@ -25,7 +25,7 @@ export default function Nav({ items }) {
   return (
     <NavList>
       {items.map((item) => (
-        <NavListItem>{item}</NavListItem>
+        <NavListItem key={item}>{item}</NavListItem>
       ))}
     </NavList>
   );

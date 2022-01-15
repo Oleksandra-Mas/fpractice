@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderList from "./HeaderList";
-import Button from "./Button";
+import Button from "../Button";
 import Nav from "./Nav";
 
 const navList = ["Home", "Destinations", "About", "Partner"];

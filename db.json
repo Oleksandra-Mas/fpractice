@@ -1,0 +1,14 @@
+{
+  "query": [
+    {
+      "location": "location1",
+      "activity": "activity1",
+      "grade": "grade2",
+      "date": "date2",
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ]
+}
