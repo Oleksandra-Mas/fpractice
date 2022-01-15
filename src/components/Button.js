@@ -39,5 +39,5 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  text: PropTypes.arrayOf(),
+  text: PropTypes.string,
 };
