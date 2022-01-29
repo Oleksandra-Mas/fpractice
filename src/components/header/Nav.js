@@ -1,31 +1,43 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import { routes } from "../../routes";
 
 const NavList = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.1875;
-  color: #b8becd;
+
+  .link {
+    display: block;
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 1.1875;
+    color: #b8becd;
+
+    ::first-letter {
+      text-transform: uppercase;
+    }
+    :hover {
+      color: #202336;
+      font-weight: 500;
+    }
+  }
 `;
 
 const NavListItem = styled.li`
   margin-right: 34px;
-  :hover {
-    color: #202336;
-    font-weight: 500;
-  }
 `;
 
-export default function Nav({ items }) {
+export default function Nav() {
   return (
     <NavList>
-      {items.map((item) => (
-        <NavListItem key={item}>{item}</NavListItem>
+      {routes.map(({ path, name }) => (
+        <NavListItem key={name}>
+          <NavLink className="link" to={path}>
+            {name}
+          </NavLink>
+        </NavListItem>
       ))}
     </NavList>
   );
