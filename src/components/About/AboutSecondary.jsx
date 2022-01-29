@@ -14,7 +14,7 @@ const Text = styled.p`
   color: #7d7987;
 `;
 
-export const AboutSecondary = () => {
+const AboutSecondary = () => {
   return (
     <div>
       <AboutTitlte>Guides by Thousand Sunny </AboutTitlte>
@@ -27,3 +27,4 @@ export const AboutSecondary = () => {
     </div>
   );
 };
+export default AboutSecondary;

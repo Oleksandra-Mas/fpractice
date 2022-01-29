@@ -24,4 +24,9 @@ export const routes = {
     name: "guide",
     mainNav: false,
   },
+  review: {
+    path: "review",
+    name: "review",
+    mainNav: true,
+  },
 };

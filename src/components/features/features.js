@@ -47,7 +47,7 @@ const Title = styled.h2`
   line-height: 1.39;
 `;
 
-export const Features = () => {
+const Features = () => {
   const [photos, setPhotos] = useState([]);
   const [search, setSearch] = useState("sea");
 
@@ -79,3 +79,5 @@ export const Features = () => {
     </section>
   );
 };
+
+export default Features;

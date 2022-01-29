@@ -16,7 +16,7 @@ const Text = styled.p`
   color: #7d7987;
 `;
 
-export const About = () => {
+const About = () => {
   return (
     <div>
       <AboutTitlte>A new way to explore the world </AboutTitlte>
@@ -35,3 +35,4 @@ export const About = () => {
     </div>
   );
 };
+export default About;
