@@ -56,7 +56,7 @@ export const Features = () => {
       setPhotos(res.photos);
     };
     getPhotos();
-  }, []);
+  }, [search]);
   return (
     <section>
       <Title>Featured destinations</Title>

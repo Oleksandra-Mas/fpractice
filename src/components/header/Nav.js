@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { routes } from "../../routes";
@@ -32,13 +31,19 @@ const NavListItem = styled.li`
 export default function Nav() {
   return (
     <NavList>
-      {routes.map(({ path, name }) => (
-        <NavListItem key={name}>
-          <NavLink className="link" to={path}>
-            {name}
-          </NavLink>
-        </NavListItem>
-      ))}
+      {routes.map(({ path, name, mainNav }) => {
+        if (mainNav) {
+          return (
+            <NavListItem key={name}>
+              <NavLink className="link" to={path}>
+                {name}
+              </NavLink>
+            </NavListItem>
+          );
+        } else {
+          return null;
+        }
+      })}
     </NavList>
   );
 }
