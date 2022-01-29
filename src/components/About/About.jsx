@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Button from "../Button";
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { routes } from "../../routes";
 
 const AboutTitlte = styled.h2`
@@ -25,7 +25,12 @@ export const About = () => {
         to plan and execute their perfect trip, but now, they can also let
         Lonely Planet Experiences lead the way
       </Text>
-      <Button text="Learn more" type="link" styleType="bright" path="guide" />
+      <Button
+        text="Learn more"
+        type="link"
+        styleType="bright"
+        path={routes.guide.path}
+      />
       <Outlet />
     </div>
   );

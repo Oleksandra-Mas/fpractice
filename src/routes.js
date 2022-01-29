@@ -1,32 +1,27 @@
-export const routes = [
-  {
+export const routes = {
+  home: {
     path: "/",
     name: "home",
-    component: "",
     mainNav: true,
   },
-  {
+  feuters: {
     path: "feuters",
     name: "destinations",
-    component: "",
     mainNav: true,
   },
-  {
+  about: {
     path: "about",
     name: "about",
-    component: "",
     mainNav: true,
   },
-  {
+  partner: {
     path: "partner",
     name: "partner",
-    component: "",
     mainNav: true,
   },
-  {
+  guide: {
     path: "guide",
     name: "guide",
-    component: "",
     mainNav: false,
   },
-];
+};

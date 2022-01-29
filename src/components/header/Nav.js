@@ -31,7 +31,8 @@ const NavListItem = styled.li`
 export default function Nav() {
   return (
     <NavList>
-      {routes.map(({ path, name, mainNav }) => {
+      {Object.keys(routes).map((key) => {
+        const { path, name, mainNav } = routes[key];
         if (mainNav) {
           return (
             <NavListItem key={name}>

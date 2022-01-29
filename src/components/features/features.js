@@ -50,12 +50,17 @@ const Title = styled.h2`
 export const Features = () => {
   const [photos, setPhotos] = useState([]);
   const [search, setSearch] = useState("sea");
+
   useEffect(() => {
     const getPhotos = async () => {
       const res = await getPexelsImages(search);
       setPhotos(res.photos);
     };
     getPhotos();
+
+    return () => {
+      setSearch("");
+    };
   }, [search]);
   return (
     <section>
